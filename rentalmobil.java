@@ -1,3 +1,5 @@
+package com;
+
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.time.format.DateTimeFormatter;
@@ -105,7 +107,6 @@ public class rentalmobil
         
         System.out.print("\nMasukkan Nama : ");
         tr.name = input.nextLine();
-    
         System.out.print("Daftar tipe mobil : \n 1. "+mb.merk+" "+mb.type+" Rp."+mb.hrg+"\n 2. "+mb1.merk+" "+mb1.type+" Rp."+mb1.hrg+"\n 3. "+mb2.merk+" "+mb2.type+" Rp."+mb2.hrg+"\n 4. "+mb3.merk+" "+mb3.type+" Rp."+mb3.hrg+"\n");
         System.out.print("Pilih nomor: ");
         int plh = input.nextInt();
@@ -241,7 +242,7 @@ public class rentalmobil
                 break;
             }
             System.out.println("----------------------------------------------\n");
-            System.out.print("Masukkan tanggal anda mengembalikan mobil (dd-MM-yyyy) : ");
+            System.out.println("Masukkan tanggal anda mengembalikan mobil (dd-MM-yyyy) : ");
             tr.dateR = input.next();
             try {
                 Date dateI = sdf.parse(tr.dateR);
@@ -335,7 +336,7 @@ public class rentalmobil
                         break;
                     }
                     System.out.println("----------------------------------------------\n");
-                    System.out.print("Masukkan tanggal anda mengembalikan mobil (dd-MM-yyyy) : ");
+                    System.out.println("Masukkan tanggal anda mengembalikan mobil (dd-MM-yyyy) : ");
                     tr.dateR = input.next();
                     try {
                         Date dateI = sdf.parse(tr.dateR);
@@ -502,7 +503,7 @@ public class rentalmobil
                         ls.add(tr);
                         hm.put(tr.kdbk, ls);
                         for (transaksim trm : booK) {
-                        System.out.println("Kembalian : " + trm.getPayB());
+                        System.out.println("Kembalian : Rp." + trm.getPayB());
                         break;
                         }
                         System.out.println();
@@ -537,7 +538,7 @@ public class rentalmobil
                 ls.add(tr);
                 hm.put(tr.kdbk, ls);
                 for (transaksim trm : booK) {
-                    System.out.println("Kembalian : " + trm.getPayB());
+                    System.out.println("Kembalian : Rp." + trm.getPayB());
                     break;
                 }
                 System.out.println();
@@ -636,7 +637,7 @@ public class rentalmobil
                                 ls.add(tr);
                                 hm.put(tr.kdbk, ls);
                                 for (transaksim trm : booK) {
-                                    System.out.println("Kembalian : " + trm.getPayB());
+                                    System.out.println("Kembalian : Rp." + trm.getPayB());
                                     break;
                                 }
                                 System.out.println();
@@ -672,7 +673,7 @@ public class rentalmobil
                         ls.add(tr);
                         hm.put(tr.kdbk, ls);
                         for (transaksim trm : booK) {
-                            System.out.println("Kembalian : " + trm.getPayB());
+                            System.out.println("Kembalian : Rp." + trm.getPayB());
                             break;
                         }
                         System.out.println();
