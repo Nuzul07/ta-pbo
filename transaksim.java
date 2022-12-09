@@ -142,6 +142,17 @@ class transaksim
             }
     }
 
+    void chdate ()
+    {   
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        try {
+            sdf.parse(dateB);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
     void Cdate1()
     {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
